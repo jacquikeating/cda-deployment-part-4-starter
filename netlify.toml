@@ -1,0 +1,21 @@
+[build]
+  command = "CI=false npm run build"
+  functions = "functions"
+  publish = "client/build"
+
+[[redirects]]
+  force = true
+  from = "/warehouses"
+  status = 200
+  to = "https://warm-woodland-54729-516b83a873b7.herokuapp.com/warehouses"
+
+[[redirects]]
+  force = true
+  from = "/api/*"
+  status = 200
+  to = "https://warm-woodland-54729-516b83a873b7.herokuapp.com/inventories"
+
+[[redirects]]
+  from = "/*"
+  status = 200
+  to = "/index.html"
